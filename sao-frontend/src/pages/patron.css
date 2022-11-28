@@ -1,0 +1,14 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+.page {
+    background-color: antiquewhite;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10vw;
+    justify-items: center;
+    padding: 10vh 0;
+}
