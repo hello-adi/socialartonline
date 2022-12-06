@@ -17,7 +17,11 @@ function CuratorForm(props) {
         e.preventDefault();
         let comment = temp;
         console.log(props.source+'\n'+ comment);
-        //add comment to image using (props.source) and comment
+        
+        
+        //change props.source to new image from art_pool
+        //add new image to on_display, remove old image from on_display
+        //set onDisplay boolean to true for new image, false for old image
     }
    
     return (
@@ -27,8 +31,8 @@ function CuratorForm(props) {
             </div>
             <div {...getCollapseProps()}>
                 <form onSubmit={handleSubmit}>
-                    <label>Enter Photo URL:</label><br/>
-                    <input type="text" placeholder='URL' value={temp} onChange={handleChange}/><br/>
+                    <label>Enter Photo ID:</label><br/>
+                    <input type="text" placeholder='media_id' value={temp} onChange={handleChange}/><br/>
                     <input type="submit" value="Change Photo"/>
                 </form>
             </div>
