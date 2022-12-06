@@ -27,6 +27,15 @@ function CollapseForm(props) {
             </div>
             <div {...getCollapseProps()}>
                 <form onSubmit={handleSubmit}>
+                    <label>Rating:</label>
+                    <input type="range" min="1" max="5" list="steplist"/><br/>
+                    <datalist id="steplist">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </datalist>
                     <label>Post a Comment:</label><br/>
                     <input type="text" placeholder='Comment' value={temp} onChange={handleChange}/><br/>
                     <input type="submit" value="Post"/>

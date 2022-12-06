@@ -1,6 +1,7 @@
 import './home.css';
 import {React, Component} from 'react';
 import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 class Home extends Component {
     constructor(props) {
@@ -27,44 +28,37 @@ class Home extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        let username = this.state.username;
-        let password = this.state.password;
-        let login = {username, password};
         let access = '/';
+
+        axios({
+            method: 'post',
+            url: 'http://127.0.0.1:5000/login',
+            data: {username: "hello1", password: "world1"}
+        }).then(function(res) {
+            console.log(res);
+        }).catch(function(e) {
+            throw(e);
+        });
         
-        if (login.username === 'patron') {
-
-            access = '/patron';
-        } else if (login.username === 'curator') {
-
-            access = '/patron';
-        } else if (login.username === 'moderator') {
-
-            access = '/moderator';
-        } else {
-
-            alert("This is not a valid username");
-        }
+        //if username matches password in users table, change access to corresponding role
+        //i.e. if username password matches with moderator access='/moderator' etc.
+        //if username does not have a match, alert("Login info incorrect");        
 
         this.props.navigate(access);
 
     }
 
     render() {
-
-    
     
     return (
-        <div className="page">
             <div className='content'>
-                <h1>Login</h1>
                 <form onSubmit={(e)=>this.handleSubmit(e)}>
+                    <h1>Login</h1><br/>
                     <input type="text" placeholder='Username' value={this.state.username} onChange={this.handleUsername}/><br/>
                     <input type="text" placeholder='Password' value={this.state.password} onChange={this.handlePassword}/><br/>
                     <input type='submit' value='Go!'/>
                 </form>
             </div>
-        </div>
         );
     } 
 }
