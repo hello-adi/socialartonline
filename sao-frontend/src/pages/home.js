@@ -57,7 +57,7 @@ class Home extends Component {
     //i.e. if username password matches with moderator access='/moderator' etc.
     //if username does not have a match, alert("Login info incorrect");
     console.log(access);
-    this.props.navigate(access);
+    this.props.navigate("/curator");
   }
 
   render() {
