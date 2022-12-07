@@ -29,8 +29,8 @@ class Home extends Component {
     let access = "/";
 
     const form = new FormData();
-    form.append("u", this.state.username);
-    form.append("p", this.state.password);
+    form.append("username", this.state.username);
+    form.append("password", this.state.password);
     console.log(form);
 
     const options = {
