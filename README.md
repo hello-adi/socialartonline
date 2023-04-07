@@ -11,13 +11,20 @@ A web app utilizing the National Gallery of Art database to act as a platform fo
 - Patrons are the users who can view the selected artwork on display, engage in conversation by adding and responding to comments as well as give a rating to the paintings.
 - Moderators are who keep the discourse clean and have the ability to monitor the comments and remove any comments if needed.
 
+## Data Models
+
+### Conceputal
+![](/images/Conceptual.png?raw=true)
+
+### Logical
+![](/images/Logical.png?raw=true)
+
+### Physical
+![](/images/Physical.png?raw=true)
+
 ## Installation
 
-After install, make sure to run `joe u`. This will download all `.gitignore` files in `~/joe-data/` folder.
-
-### Option 1: Binary
-
-`joe` is available for OSX (macOS), Linux and Windows.
+SAO is written with Flask/Python for the back-end and React.js for the front-end.
 
 Download the latest binary from the [Releases page](https://github.com/karan/joe/releases). It's the easiest way to get started with `joe`.
 
