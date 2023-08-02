@@ -2,7 +2,7 @@
 
 A web app utilizing the National Gallery of Art database to act as a platform for users to comment and share their thoughts on art pieces. An attempt to bring the traditional art gallery experience at home. You know, enjoying art socially in an online setting.
 
-![](https://thenerdstash.com/wp-content/uploads/2022/08/ferris-bueller.jpg)
+![](https://clickamericana.com/wp-content/uploads/Museum-scene-Ferris-Buellers-Day-Off-1986.jpg)
 
 ## Features
 
